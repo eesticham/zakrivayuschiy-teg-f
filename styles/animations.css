@@ -12,3 +12,63 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+
+svg.is-liked {
+
+    .core {
+        transition: fill 0.1s ease;
+    }
+
+    .main-body {
+        transition: fill 0.1s 0.1s ease;
+    }
+
+    .contour {
+        transition: fill 0.1s 0.2s ease;
+    }
+
+    .full-heart {
+        transform-origin: center;
+        animation: heartScaleAnimation 0.3s 0.1s ease-in;
+    }
+
+    .sparks {
+        animation: sparkAnimation 0.3s 0.3s ease-in;
+    }
+}
+
+@keyframes heartScaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes sparkAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+svg {
+    .contour {
+        transition: fill 0.1s ease;
+    }
+}

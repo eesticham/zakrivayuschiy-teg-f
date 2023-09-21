@@ -1,46 +1,549 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
-    <script src="./scripts/set-theme.js"></script>
-  </head>
-  <body class="page">
-    <header class="header">
-      <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-        <ul class="theme-menu__list">
-          <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
-              Темно
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
-            >
-              Авто
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
-              Светло
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link id="favicon" rel="icon" type="image/svg+xml" href="./svg/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <link rel="stylesheet" href="./styles/themes.css" />
+  <meta name="color-scheme" content="light dark">
+  <script src="./scripts/set-theme.js"></script>
+</head>
+
+<body class="page bg-gradient">
+  <header class="header">
+    <h1 class="header__title">&lt;/HTML&gt;</h1>
+    <div class="header__text">
+      <p>закрывающий тег</p>
+    </div>
+    <nav class="theme-menu header__theme-menu">
+      <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+      <ul class="theme-menu__list">
+        <li class="theme-menu__item">
+          <button type="button" data-theme="dark" class="theme-menu__button button-wrapper">
+            ТЕМНО
+          </button>
+        </li>
+        <li class="theme-menu__item">
+          <button type="button" data-theme="auto" disabled class="theme-menu__button button-wrapper">
+            АВТО
+          </button>
+        </li>
+        <li class="theme-menu__item">
+          <button type="button" data-theme="light" class="theme-menu__button button-wrapper">
+            СВЕТЛО
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section__cards_list">
+      <article class="card">
+        <h2 class="card__header">Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van.png" alt="пиксель арт минивен в лесу неоновые тона">
+          <p class="image-logo">&lt;/HTML&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>Это было самое начало пути. На этом этапе важно было проникнуться
+            основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+          <p>Много информации, но все здорово, инетерсно и круто. Нравилось разбираться и видеть как из ничего
+            появляется красота.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">1 спринт: Я — чистый лист</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_2.png" alt="пиксель арт минивен в лесу блеклые тона">
+          <p class="image-logo">&lt;/HTML&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них —
+            страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим
+            ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не
+            справлюсь?</p>
+          <p>Несомненно страшно с нуля начинать. Многое непонятно, а как правильно? Как быть?</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">1 спринт: А если не получится?</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_3.png" alt="пиксель арт минивен в лесу кислотные тона">
+          <p class="image-logo">&lt;CSS&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться
+            ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
+          <p>После проекта осталось двоякое послевкусие. Вроде и вовремя успел, и все сдал. Здорово ж! Однако ощущение,
+            что задание криво формулировалось осталось.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">2 спринт: Погоня за идеалом</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_4.png" alt="пиксель арт минивен в лесу неоновые тона">
+          <p class="image-logo">&lt;desigions&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы
+            могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены
+            перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.</p>
+          <p>Стремление сделать хорошо бесспорно всегда со мной. Порой от этого страдаю. Начал сталкиваться с тем, что
+            ревьюверы будто порционно выдают косяки. Из-за этого начинают шалить нервы. Ведь попыток сдать всего четыре!
+          </p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">2 спринт: О тех, кто рядом</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_5.png" alt="пиксель арт минивен в лесу фильтр негатив">
+          <p class="image-logo">&lt;care&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас
+            окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если
+            очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не
+            правда ли?</p>
+          <p>Тот период выдался нагруженным. У меня подвал затопило. Работы много. Благо канкулы были. Время пролетело
+            очень быстро. Толком отдохнуть не удалось.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">3 спринт: Обходные стратегии</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_6.png" alt="пиксель арт минивен в лесу фильтр сепия">
+          <p class="image-logo">&lt;support&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто
+            иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
+          <p>Материала было много. По моим ощущениям больше чем в других блоках. Еле успел до дедлайна сдать работу.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">3 спринт: Когда опускаются руки</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_7.png" alt="пиксель арт минивен в лесу фильтр блюр">
+          <p class="image-logo">&lt;lifes-style: none;&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать,
+            и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень
+            нужна концентрация. Вспомните, откуда вы её черпали.</p>
+          <p>Ох тут я снов столкнулся с кривым ТЗ и макетом, который местами показывает одно, а имеет в виду другое!
+            Сколько я намучился. Еще и ревьювер давал пространственные советы / ответы. В общем голова шла кругом и
+            почти ничего не успевал. Чудом сдал.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <h2 class="card__header">«Сейчас я здесь»</h2>
+        <div class="card__image-container">
+          <img class="card__image" src="./images/van_8.png"
+            alt="пиксель арт минивен в лесу эффект съемки на старую камеру">
+          <p class="image-logo">&lt;experience&gt;</p>
+        </div>
+        <div class="card__description">
+          <p>Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала
+            про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир
+            постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания.
+            Ведь часто путь — и есть результат.</p>
+          <p>Этот блок был классным. Приятным. Красивым. Очень понравился. А потом как гром среди ясного неба я узнаю,
+            что скоро дедлайн. Был уверн, что еще неделя в запасе точно есть! Как же я негодовал. Ссылка на макет
+            отсутствует (оказалось, она спрятана в самом самом конце). Нашел какую-то в комментариях в чатах. Там макет
+            оказался вообще другой с другими данными. И все большим снежным комом закручивалось закручивалось. Как-то
+            выпал в целом из временных рамок.</p>
+        </div>
+        <div class="card__controls">
+          <button class="card__icon-button" aria-labelledby="like-button">
+            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+
+              <g class="full-heart">
+                <path class="contour"
+                  d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" />
+
+                <path class="main-body"
+                  d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" />
+
+                <path class="core"
+                  d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" />
+              </g>
+
+              <path class="sparks"
+                d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" />
+
+            </svg>
+          </button>
+          <button type="button" class="button card__like-button">
+            <span class="button__text">like</span>
+          </button>
+        </div>
+      </article>
+    </section>
+    <button type="button" class="save_for_later_button" onclick="window['saveForLaterDialog'].showModal();"
+      aria-controls="dialog-id">
+      <svg class="floppy_icon" width="29" height="28" viewBox="0 0 29 28" fill="black"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="2.15396" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="4.30762" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="6.46158" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="8.61523" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="10.7692" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="12.9232" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="15.0768" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="17.2308" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="19.3848" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="21.5384" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="23.6924" width="2.15385" height="2.15385" />
+        <rect x="0.5" y="25.846" width="2.15385" height="2.15385" />
+        <rect x="24.1927" width="2.15385" height="2.15385" transform="rotate(90 24.1927 0)" />
+        <rect x="22.0391" width="2.15385" height="2.15385" transform="rotate(90 22.0391 0)" />
+        <rect x="19.8842" width="2.15385" height="2.15385" transform="rotate(90 19.8842 0)" />
+        <rect x="17.7305" width="2.15385" height="2.15385" transform="rotate(90 17.7305 0)" />
+        <rect x="15.5768" width="2.15385" height="2.15385" transform="rotate(90 15.5768 0)" />
+        <rect x="13.4232" width="2.15385" height="2.15385" transform="rotate(90 13.4232 0)" />
+        <rect x="11.2695" width="2.15385" height="2.15385" transform="rotate(90 11.2695 0)" />
+        <rect x="9.11584" width="2.15385" height="2.15385" transform="rotate(90 9.11584 0)" />
+        <rect x="6.96094" width="2.15385" height="2.15385" transform="rotate(90 6.96094 0)" />
+        <rect x="4.80725" width="2.15385" height="2.15385" transform="rotate(90 4.80725 0)" />
+        <rect x="26.3463" y="2.15396" width="2.15385" height="2.15385" transform="rotate(90 26.3463 2.15396)" />
+        <rect x="6.96094" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 6.96094 4.30762)" />
+        <rect x="6.96094" y="2.15396" width="2.15385" height="2.15385" transform="rotate(90 6.96094 2.15396)" />
+        <rect x="6.96094" y="6.46158" width="2.15385" height="2.15385" transform="rotate(90 6.96094 6.46158)" />
+        <rect x="22.0391" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 22.0391 4.30762)" />
+        <rect x="22.0391" y="2.15396" width="2.15385" height="2.15385" transform="rotate(90 22.0391 2.15396)" />
+        <rect x="22.0391" y="6.46158" width="2.15385" height="2.15385" transform="rotate(90 22.0391 6.46158)" />
+        <rect x="17.7305" y="4.30762" width="2.15385" height="2.15385" transform="rotate(90 17.7305 4.30762)" />
+        <rect x="17.7305" y="2.15396" width="2.15385" height="2.15385" transform="rotate(90 17.7305 2.15396)" />
+        <rect x="17.7305" y="6.46158" width="2.15385" height="2.15385" transform="rotate(90 17.7305 6.46158)" />
+        <rect x="22.0391" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 22.0391 8.61523)" />
+        <rect x="19.8842" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 19.8842 8.61523)" />
+        <rect x="17.7305" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 17.7305 8.61523)" />
+        <rect x="15.5768" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 15.5768 8.61523)" />
+        <rect x="13.4232" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 13.4232 8.61523)" />
+        <rect x="11.2695" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 11.2695 8.61523)" />
+        <rect x="9.11584" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 9.11584 8.61523)" />
+        <rect x="6.96094" y="8.61523" width="2.15385" height="2.15385" transform="rotate(90 6.96094 8.61523)" />
+        <rect x="24.1927" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 24.1927 15.0768)" />
+        <rect x="22.0391" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 22.0391 15.0768)" />
+        <rect x="19.8842" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 19.8842 15.0768)" />
+        <rect x="17.7305" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 17.7305 15.0768)" />
+        <rect x="15.5768" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 15.5768 15.0768)" />
+        <rect x="13.4232" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 13.4232 15.0768)" />
+        <rect x="11.2695" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 11.2695 15.0768)" />
+        <rect x="9.11584" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 9.11584 15.0768)" />
+        <rect x="6.96094" y="15.0768" width="2.15385" height="2.15385" transform="rotate(90 6.96094 15.0768)" />
+        <rect x="24.1927" y="17.2308" width="2.15385" height="2.15385" transform="rotate(90 24.1927 17.2308)" />
+        <rect x="6.96094" y="17.2308" width="2.15385" height="2.15385" transform="rotate(90 6.96094 17.2308)" />
+        <rect x="24.1927" y="19.3848" width="2.15385" height="2.15385" transform="rotate(90 24.1927 19.3848)" />
+        <rect x="6.96094" y="19.3848" width="2.15385" height="2.15385" transform="rotate(90 6.96094 19.3848)" />
+        <rect x="24.1927" y="21.5384" width="2.15385" height="2.15385" transform="rotate(90 24.1927 21.5384)" />
+        <rect x="6.96094" y="21.5384" width="2.15385" height="2.15385" transform="rotate(90 6.96094 21.5384)" />
+        <rect x="6.96094" y="23.6924" width="2.15385" height="2.15385" transform="rotate(90 6.96094 23.6924)" />
+        <rect x="24.1927" y="23.6924" width="2.15385" height="2.15385" transform="rotate(90 24.1927 23.6924)" />
+        <rect x="26.3463" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 26.3463 25.846)" />
+        <rect x="24.1927" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 24.1927 25.846)" />
+        <rect x="22.0391" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 22.0391 25.846)" />
+        <rect x="19.8842" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 19.8842 25.846)" />
+        <rect x="17.7305" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 17.7305 25.846)" />
+        <rect x="15.5768" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 15.5768 25.846)" />
+        <rect x="13.4232" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 13.4232 25.846)" />
+        <rect x="11.2695" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 11.2695 25.846)" />
+        <rect x="9.11584" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 9.11584 25.846)" />
+        <rect x="6.96094" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 6.96094 25.846)" />
+        <rect x="4.80725" y="25.846" width="2.15385" height="2.15385" transform="rotate(90 4.80725 25.846)" />
+        <rect x="28.5" y="28" width="2.15385" height="2.15385" transform="rotate(-180 28.5 28)" />
+        <rect x="28.5" y="25.846" width="2.15385" height="2.15385" transform="rotate(-180 28.5 25.846)" />
+        <rect x="28.5" y="23.6924" width="2.15385" height="2.15385" transform="rotate(-180 28.5 23.6924)" />
+        <rect x="28.5" y="21.5384" width="2.15385" height="2.15385" transform="rotate(-180 28.5 21.5384)" />
+        <rect x="28.5" y="19.3848" width="2.15385" height="2.15385" transform="rotate(-180 28.5 19.3848)" />
+        <rect x="28.5" y="17.2308" width="2.15385" height="2.15385" transform="rotate(-180 28.5 17.2308)" />
+        <rect x="28.5" y="15.0768" width="2.15385" height="2.15385" transform="rotate(-180 28.5 15.0768)" />
+        <rect x="28.5" y="12.9232" width="2.15385" height="2.15385" transform="rotate(-180 28.5 12.9232)" />
+        <rect x="28.5" y="10.7692" width="2.15385" height="2.15385" transform="rotate(-180 28.5 10.7692)" />
+        <rect x="28.5" y="8.61523" width="2.15385" height="2.15385" transform="rotate(-180 28.5 8.61523)" />
+        <rect x="28.5" y="6.46158" width="2.15385" height="2.15385" transform="rotate(-180 28.5 6.46158)" />
+      </svg>
+      <p class="save_for_later_button_text">
+        Сохранить на память
+      </p>
+    </button>
+    <dialog id="saveForLaterDialog">
+      <div class="modal-window">
+        <div class="modal-window_title">
+          <svg class="floppy_icon" width="39" height="39" viewBox="0 0 39 39" fill="black"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="3.00001" height="3" />
+            <rect y="3" width="3.00001" height="3" />
+            <rect y="6" width="3.00001" height="3" />
+            <rect y="9" width="3.00001" height="3" />
+            <rect y="12" width="3.00001" height="3" />
+            <rect y="15" width="3.00001" height="3" />
+            <rect y="18" width="3.00001" height="3" />
+            <rect y="21" width="3.00001" height="3" />
+            <rect y="24" width="3.00001" height="3" />
+            <rect y="27" width="3.00001" height="3" />
+            <rect y="30" width="3.00001" height="3" />
+            <rect y="33" width="3.00001" height="3" />
+            <rect y="36" width="3.00001" height="3" />
+            <rect x="33" width="3" height="3.00001" transform="rotate(90 33 0)" />
+            <rect x="30.0032" width="3" height="3.00001" transform="rotate(90 30.0032 0)" />
+            <rect x="26.9998" width="3" height="3.00001" transform="rotate(90 26.9998 0)" />
+            <rect x="23.9998" width="3" height="3.00001" transform="rotate(90 23.9998 0)" />
+            <rect x="20.999" width="3" height="3.00001" transform="rotate(90 20.999 0)" />
+            <rect x="17.9998" width="3" height="3.00001" transform="rotate(90 17.9998 0)" />
+            <rect x="14.999" width="3" height="3.00001" transform="rotate(90 14.999 0)" />
+            <rect x="12" width="3" height="3.00001" transform="rotate(90 12 0)" />
+            <rect x="8.99609" width="3" height="3.00001" transform="rotate(90 8.99609 0)" />
+            <rect x="6" width="3" height="3.00001" transform="rotate(90 6 0)" />
+            <rect x="36.0007" y="3" width="3" height="3.00001" transform="rotate(90 36.0007 3)" />
+            <rect x="8.99609" y="6" width="3" height="3.00001" transform="rotate(90 8.99609 6)" />
+            <rect x="8.99609" y="3" width="3" height="3.00001" transform="rotate(90 8.99609 3)" />
+            <rect x="8.99609" y="9" width="3" height="3.00001" transform="rotate(90 8.99609 9)" />
+            <rect x="30.0032" y="6" width="3" height="3.00001" transform="rotate(90 30.0032 6)" />
+            <rect x="30.0032" y="3" width="3" height="3.00001" transform="rotate(90 30.0032 3)" />
+            <rect x="30.0032" y="9" width="3" height="3.00001" transform="rotate(90 30.0032 9)" />
+            <rect x="23.9998" y="6" width="3" height="3.00001" transform="rotate(90 23.9998 6)" />
+            <rect x="23.9998" y="3" width="3" height="3.00001" transform="rotate(90 23.9998 3)" />
+            <rect x="23.9998" y="9" width="3" height="3.00001" transform="rotate(90 23.9998 9)" />
+            <rect x="30.0032" y="12" width="3" height="3.00001" transform="rotate(90 30.0032 12)" />
+            <rect x="26.9998" y="12" width="3" height="3.00001" transform="rotate(90 26.9998 12)" />
+            <rect x="23.9998" y="12" width="3" height="3.00001" transform="rotate(90 23.9998 12)" />
+            <rect x="20.999" y="12" width="3" height="3.00001" transform="rotate(90 20.999 12)" />
+            <rect x="17.9998" y="12" width="3" height="3.00001" transform="rotate(90 17.9998 12)" />
+            <rect x="14.999" y="12" width="3" height="3.00001" transform="rotate(90 14.999 12)" />
+            <rect x="12" y="12" width="3" height="3.00001" transform="rotate(90 12 12)" />
+            <rect x="8.99609" y="12" width="3" height="3.00001" transform="rotate(90 8.99609 12)" />
+            <rect x="33" y="21" width="3" height="3.00001" transform="rotate(90 33 21)" />
+            <rect x="30.0032" y="21" width="3" height="3.00001" transform="rotate(90 30.0032 21)" />
+            <rect x="26.9998" y="21" width="3" height="3.00001" transform="rotate(90 26.9998 21)" />
+            <rect x="23.9998" y="21" width="3" height="3.00001" transform="rotate(90 23.9998 21)" />
+            <rect x="20.999" y="21" width="3" height="3.00001" transform="rotate(90 20.999 21)" />
+            <rect x="17.9998" y="21" width="3" height="3.00001" transform="rotate(90 17.9998 21)" />
+            <rect x="14.999" y="21" width="3" height="3.00001" transform="rotate(90 14.999 21)" />
+            <rect x="12" y="21" width="3" height="3.00001" transform="rotate(90 12 21)" />
+            <rect x="8.99609" y="21" width="3" height="3.00001" transform="rotate(90 8.99609 21)" />
+            <rect x="33" y="24" width="3" height="3.00001" transform="rotate(90 33 24)" />
+            <rect x="8.99609" y="24" width="3" height="3.00001" transform="rotate(90 8.99609 24)" />
+            <rect x="33" y="27" width="3" height="3.00001" transform="rotate(90 33 27)" />
+            <rect x="8.99609" y="27" width="3" height="3.00001" transform="rotate(90 8.99609 27)" />
+            <rect x="33" y="30" width="3" height="3.00001" transform="rotate(90 33 30)" />
+            <rect x="8.99609" y="30" width="3" height="3.00001" transform="rotate(90 8.99609 30)" />
+            <rect x="8.99609" y="33" width="3" height="3.00001" transform="rotate(90 8.99609 33)" />
+            <rect x="33" y="33" width="3" height="3.00001" transform="rotate(90 33 33)" />
+            <rect x="36.0007" y="36" width="3" height="3.00001" transform="rotate(90 36.0007 36)" />
+            <rect x="33" y="36" width="3" height="3.00001" transform="rotate(90 33 36)" />
+            <rect x="30.0032" y="36" width="3" height="3.00001" transform="rotate(90 30.0032 36)" />
+            <rect x="26.9998" y="36" width="3" height="3.00001" transform="rotate(90 26.9998 36)" />
+            <rect x="23.9998" y="36" width="3" height="3.00001" transform="rotate(90 23.9998 36)" />
+            <rect x="20.999" y="36" width="3" height="3.00001" transform="rotate(90 20.999 36)" />
+            <rect x="17.9998" y="36" width="3" height="3.00001" transform="rotate(90 17.9998 36)" />
+            <rect x="14.999" y="36" width="3" height="3.00001" transform="rotate(90 14.999 36)" />
+            <rect x="12" y="36" width="3" height="3.00001" transform="rotate(90 12 36)" />
+            <rect x="8.99609" y="36" width="3" height="3.00001" transform="rotate(90 8.99609 36)" />
+            <rect x="6" y="36" width="3" height="3.00001" transform="rotate(90 6 36)" />
+            <rect x="39" y="39" width="3.00001" height="3" transform="rotate(-180 39 39)" />
+            <rect x="39" y="36" width="3.00001" height="3" transform="rotate(-180 39 36)" />
+            <rect x="39" y="33" width="3.00001" height="3" transform="rotate(-180 39 33)" />
+            <rect x="39" y="30" width="3.00001" height="3" transform="rotate(-180 39 30)" />
+            <rect x="39" y="27" width="3.00001" height="3" transform="rotate(-180 39 27)" />
+            <rect x="39" y="24" width="3.00001" height="3" transform="rotate(-180 39 24)" />
+            <rect x="39" y="21" width="3.00001" height="3" transform="rotate(-180 39 21)" />
+            <rect x="39" y="18" width="3.00001" height="3" transform="rotate(-180 39 18)" />
+            <rect x="39" y="15" width="3.00001" height="3" transform="rotate(-180 39 15)" />
+            <rect x="39" y="12" width="3.00001" height="3" transform="rotate(-180 39 12)" />
+            <rect x="39" y="9" width="3.00001" height="3" transform="rotate(-180 39 9)" />
+          </svg>
+
+          <h2 class="modal-window_header">Вставьте
+            дискету, чтобы продолжить
+          </h2>
+        </div>
+        <form method="dialog">
+          <button type="submit" class="modal-window_button">
+            <span class="modal-window_text">ок</span>
+          </button>
+        </form>
+      </div>
+
+    </dialog>
+  </main>
+  <script src="./scripts/like.js"></script>
+</body>
+
 </html>

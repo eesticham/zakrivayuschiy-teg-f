@@ -4,3 +4,60 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+:root.theme-light {
+  --font-variable-wght-header: 700;
+  --font-variable-wght-text: 400;
+  /* example
+    h1 {
+        font-family: var(--font-variable);
+        font-variation-settings: 'wght' var(--font-variable-wght-header);
+    }
+    */
+  --background-colour: #fff;
+  --accent-colour: #000;
+  --bg-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+}
+
+:root.theme-dark {
+  --font-variable-wght-header: 785;
+  --font-variable-wght-text: 465;
+  --background-colour: #000;
+  --accent-colour: #00CC14;
+  --bg-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(180deg, #007F0C 0%, #004306 100%);
+  --heart-icon-colour: cyan;
+  --like-text-colour-hover: black;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --variable-font-wght-header: 785;
+    --variable-font-wght-text: 465;
+    --background-colour: #000;
+    --accent-colour: #00CC14;
+    --bg-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(180deg, #007f0c 0%, #004306 100%);
+    --heart-icon-colour: cyan;
+    --like-text-colour-hover: black;
+  }
+
+  .card__icon-button svg .contour {
+    fill: var(--accent-colour, #00CC14);
+  }
+
+  .card__icon-button svg .main-body {
+    fill: transparent;
+  }
+
+  .card__icon-button svg .core {
+    fill: transparent;
+  }
+
+  .card__icon-button svg .sparks {
+    fill: transparent;
+  }
+}
