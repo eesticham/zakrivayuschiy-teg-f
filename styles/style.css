@@ -214,6 +214,7 @@
 
 .card__image {
   width: 100%;
+  aspect-ratio: 1/1;
   display: block;
   inline-size: 100%;
   block-size: 100%;
@@ -495,11 +496,12 @@ svg.is-liked {
 }
 
 .modal-window {
-  width: 341px;
+  max-width: 341px;
   height: 195px;
-  display: flex;
+  padding: 32px 42px;
   background-color: var(--background-colour, #fff);
   border: 2px solid var(--accent-colour, #000);
+  display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
@@ -586,6 +588,6 @@ dialog::backdrop {
   filter: hue-rotate(130deg);
 }
 
-.filter-invert {
-  filter: invert(75%);
+.filter-multi {
+  filter: invert(1) brightness(200%) saturate(60%) hue-rotate(90deg);
 }
