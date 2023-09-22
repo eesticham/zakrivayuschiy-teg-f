@@ -450,8 +450,8 @@ svg.is-liked {
 }
 
 .save_for_later_button .floppy_icon {
-  height: 30px;
-  width: 30px;
+  height: 21px;
+  width: 21px;
   fill: var(--accent-colour, #000);
   transition: fill 0.5s ease-in-out;
   position: relative;
