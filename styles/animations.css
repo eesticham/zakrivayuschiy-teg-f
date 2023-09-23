@@ -15,35 +15,38 @@
 
 .card__icon-button .like-icon {
     .core {
-      fill: transparent;
+        fill: transparent;
     }
-  
+
     .main-body {
-      fill: transparent;
+        fill: transparent;
     }
-  
+
     .contour {
-      fill: var(--accent-colour, black);
+        fill: var(--accent-colour, black);
     }
-  
+
     .sparks {
-      fill: var(--heart-icon-colour, red);
-      opacity: 0;
+        fill: var(--heart-icon-colour, red);
+        opacity: 0;
     }
-  }
+}
 
 
 .like-icon.is-liked {
 
     .core {
+        fill: var(--heart-icon-colour, red);
         transition: fill 0.1s ease;
     }
 
     .main-body {
+        fill: var(--heart-icon-colour, red);
         transition: fill 0.1s 0.1s ease;
     }
 
     .contour {
+        fill: var(--heart-icon-colour, red);
         transition: fill 0.1s 0.2s ease;
     }
 
@@ -85,18 +88,6 @@
     }
 }
 
-.like-icon.is-liked {
-    .core,
-    .main-body,
-    .contour {
-      fill: var(--heart-icon-colour, red);
-    }
-  
-    .sparks {
-      opacity: 0%;
-    }
-  }
-
 svg {
     .contour {
         transition: fill 0.1s ease;
@@ -106,33 +97,34 @@ svg {
 
 .card__icon-button:hover .like-icon {
     .core {
-      transition: fill 0.05s ease;
-      fill: var(--accent-colour, black);
+        transition: fill 0.05s ease;
+        fill: var(--accent-colour, black);
     }
-  
+
     .main-body {
-      transition: fill 0.05s 0.05s ease;
-      fill: var(--accent-colour, black);
+        transition: fill 0.05s 0.05s ease;
+        fill: var(--accent-colour, black);
     }
-  
+
     .contour {
-      transition: fill 0.05s 0.1s ease;
-      fill: var(--accent-colour, black);
+        transition: fill 0.05s 0.1s ease;
+        fill: var(--accent-colour, black);
     }
-  }
-  
-  .card__icon-button:hover .like-icon.is-liked {
+}
+
+.card__icon-button:hover .like-icon.is-liked {
+
     .core,
     .main-body,
     .contour {
-      fill: var(--heart-icon-colour, red);
+        fill: var(--heart-icon-colour, red);
     }
-  }
-  
-  .card__icon-button:active .like-icon {
-  
+}
+
+.card__icon-button:active .like-icon {
+
     .core,
     .main-body {
-      fill: var(--heart-icon-colour, red);
+        fill: var(--heart-icon-colour, red);
     }
-  }
+}

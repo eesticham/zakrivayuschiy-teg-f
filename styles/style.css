@@ -284,9 +284,15 @@ figure {
 
 .card__controls {
   display: flex;
-  margin: 0px 25px 25px;
+  margin: 0px 23px 25px;
   align-items: center;
   justify-content: flex-end;
+}
+
+@media screen and (width <= 375px) {
+  .card__controls {
+    margin: 0px 25px 25px;
+  }
 }
 
 .card__icon-button {
@@ -376,7 +382,7 @@ figure {
 @media screen and (width > 375px) {
   .bottom__save-button {
     flex-direction: row;
-    padding: 17px 19px 13px 15px;
+    padding: 16px 19px;
     gap: 10px;
   }
 }
@@ -398,7 +404,7 @@ figure {
   position: relative;
 }
 
-@media screen and (width <= 375px) {
+@media screen and (width <=375px) {
   .bottom__save-button .floppy_icon {
     height: 28px;
     width: 30px;
