@@ -26,11 +26,9 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
 }
 
 .header {
-  width: 100vw;
   min-height: 326px;
   margin: 102px auto 0px;
   display: flex;
@@ -45,12 +43,12 @@
 
 @media screen and (width >=696px) {
   .header {
-    width: 696px;
-    min-height: 364px;
+    max-width: 696px;
+    min-height: 366px;
   }
 }
 
-.header__title {
+.header__logo {
   margin-block-start: 101px;
   font-family: var(--main-font, monospace);
   color: var(--accent-colour, #000);
@@ -61,13 +59,13 @@
 }
 
 @media screen and (width >=696px) {
-  .header__title {
+  .header__logo {
     margin-block-start: 116px;
     font-size: var(--logo-font-size, 65px);
   }
 }
 
-.header__text {
+.header__title {
   font-family: var(--main-font, monospace);
   color: var(--accent-colour, #000);
   font-size: var(--title-font-size, 14px);
@@ -76,11 +74,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (width >=696px) {
-  .header__title {
-    font-size: var(--logo-font-size, 23px);
-  }
-}
+
 
 .header__theme-menu {
   display: block;
@@ -147,7 +141,8 @@
 .button-wrapper::before {
   content: "▶";
   position: absolute;
-  left: -13px;
+  top: 0px;
+  left: 0px;
   animation: heartbeat 1.5s infinite;
 }
 
@@ -166,7 +161,7 @@
 }
 
 .main {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,8 +199,16 @@
 
 @media screen and (width >=696px) {
   .card__header {
-    padding: 8px 10px;
+    padding: 5px 7px;
   }
+}
+
+figure {
+  display: block;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .card__image-container {
@@ -260,7 +263,7 @@
 
 .card__description {
   width: 100%;
-  padding: 25px 28.95px 26px 25px;
+  padding: 27px 26.95px 26px 25px;
   background-color: var(--background-colour, #fff);
   font-family: var(--variable-font, monospace);
   font-variation-settings: 'wght' var(--font-variable-wght-text, 400);
@@ -271,6 +274,12 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
+}
+
+@media screen and (width >=696px) {
+  .card__description {
+    padding: 28px 23px 25px 23px;
+  }
 }
 
 .card__controls {
@@ -286,25 +295,6 @@
   transition: outline 0.3s ease;
 }
 
-.card__icon-button svg {
-  .core {
-    fill: transparent;
-  }
-
-  .main-body {
-    fill: transparent;
-  }
-
-  .contour {
-    fill: var(--accent-colour, black);
-  }
-
-  .sparks {
-    fill: var(--heart-icon-colour, red);
-    opacity: 0;
-  }
-}
-
 .card__icon-button:focus {
   outline: none;
   text-decoration: none;
@@ -313,53 +303,6 @@
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-colour, #000);
   outline-offset: -2px;
-}
-
-svg.is-liked {
-
-  .core,
-  .main-body,
-  .contour {
-    fill: var(--heart-icon-colour, red);
-  }
-
-  .sparks {
-    opacity: 0%;
-  }
-}
-
-.card__icon-button:hover svg {
-  .core {
-    transition: fill 0.05s ease;
-    fill: var(--accent-colour, black);
-  }
-
-  .main-body {
-    transition: fill 0.05s 0.05s ease;
-    fill: var(--accent-colour, black);
-  }
-
-  .contour {
-    transition: fill 0.05s 0.1s ease;
-    fill: var(--accent-colour, black);
-  }
-}
-
-.card__icon-button:hover svg.is-liked {
-
-  .core,
-  .main-body,
-  .contour {
-    fill: var(--heart-icon-colour, red);
-  }
-}
-
-.card__icon-button:active svg {
-
-  .core,
-  .main-body {
-    fill: var(--heart-icon-colour, red);
-  }
 }
 
 .card__like-button {
@@ -372,7 +315,6 @@ svg.is-liked {
   overflow: hidden;
   position: relative;
 }
-
 
 .card__like-button:focus {
   outline: none;
@@ -415,41 +357,40 @@ svg.is-liked {
   }
 }
 
-.save_for_later_button {
-  margin: 52px 33.5px 100px;
+.bottom__save-button {
+  margin: 49px 33.5px 100px;
+  padding: 15px 20px;
   border: 2px solid var(--accent-colour, #000);
   background-color: var(--background-colour, #fff);
   color: var(--accent-colour, #000);
-  width: 309px;
-  height: 82px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 8px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
 
 @media screen and (width > 375px) {
-  .save_for_later_button {
-    width: 335px;
-    height: 51px;
+  .bottom__save-button {
     flex-direction: row;
+    padding: 17px 19px 13px 15px;
+    gap: 10px;
   }
 }
 
-.save_for_later_button:focus {
+.bottom__save-button:focus {
   outline: none;
   text-decoration: none;
 }
 
-.save_for_later_button:focus-visible {
+.bottom__save-button:focus-visible {
   box-shadow: var(--accent-colour, #000) 2px 2px;
 }
 
-.save_for_later_button .floppy_icon {
+.bottom__save-button .floppy_icon {
   height: 21px;
   width: 21px;
   fill: var(--accent-colour, #000);
@@ -457,7 +398,14 @@ svg.is-liked {
   position: relative;
 }
 
-.save_for_later_button_text {
+@media screen and (width <= 375px) {
+  .bottom__save-button .floppy_icon {
+    height: 28px;
+    width: 30px;
+  }
+}
+
+.bottom__save-button_text {
   text-wrap: nowrap;
   font-family: var(--main-font, monospace);
   font-size: 14px;
@@ -469,7 +417,7 @@ svg.is-liked {
   position: relative;
 }
 
-.save_for_later_button::before {
+.bottom__save-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -480,12 +428,12 @@ svg.is-liked {
   transition: left 0.5s ease-in-out;
 }
 
-.save_for_later_button:hover::before {
+.bottom__save-button:hover::before {
   left: 0;
 }
 
-.save_for_later_button:hover {
-  .save_for_later_button_text {
+.bottom__save-button:hover {
+  .bottom__save-button_text {
     color: var(--like-text-colour-hover, white);
   }
 
@@ -496,34 +444,45 @@ svg.is-liked {
 }
 
 .modal-window {
-  max-width: 341px;
+  max-width: 355px;
   height: 195px;
   padding: 32px 42px;
   background-color: var(--background-colour, #fff);
   border: 2px solid var(--accent-colour, #000);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
-.modal-window_title {
-  width: 257px;
-  height: 63px;
+@media screen and (width <=375px) {
+  .modal-window {
+    height: 192px;
+  }
+}
+
+.modal-window__title {
+  padding: 0px 40px 10px 0px;
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
-.modal-window_title .floppy_icon {
+@media screen and (width <=375px) {
+  .modal-window__title {
+    padding: 9px 0px;
+  }
+}
+
+.modal-window__title .floppy_icon {
   width: 96px;
   height: 39px;
   fill: var(--accent-colour, #000);
 }
 
-.modal-window_header {
+.modal-window__header {
   color: var(--accent-colour, #000);
   font-family: var(--main-font, monospace);
   font-size: 14px;
@@ -532,17 +491,21 @@ svg.is-liked {
   line-height: 150%;
 }
 
-.modal-window_button {
-  width: 257px;
-  height: 38px;
-  padding: 9px 17px;
+.modal-window__button {
+  padding: 9px 130px;
   border: 2px solid var(--accent-colour, #000);
   background-color: var(--background-colour, #fff);
   color: var(--accent-colour, #000);
   cursor: pointer;
 }
 
-.modal-window_text {
+@media screen and (width <=375px) {
+  .modal-window__button {
+    padding: 9px 113px;
+  }
+}
+
+.modal-window__button_text {
   color: var(--accent-colour, #000);
   font-family: var(--main-font, monospace);
   font-size: 14px;
@@ -551,11 +514,11 @@ svg.is-liked {
   line-height: 90%;
 }
 
-dialog {
+.bottom__dialog {
   padding: 0px;
 }
 
-dialog::backdrop {
+.bottom__dialog::backdrop {
   background-color: rgb(0 0 0 / 0.3);
   backdrop-filter: blur(7px);
 }
@@ -585,9 +548,13 @@ dialog::backdrop {
 }
 
 .filter-hue-rotate {
-  filter: hue-rotate(130deg);
+  filter: hue-rotate(30deg);
+}
+
+.filter-invert {
+  filter: invert(1);
 }
 
 .filter-multi {
-  filter: invert(1) brightness(200%) saturate(60%) hue-rotate(90deg);
+  filter: brightness(200%) saturate(200%) hue-rotate(3deg);
 }

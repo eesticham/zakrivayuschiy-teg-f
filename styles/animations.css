@@ -13,9 +13,27 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+.card__icon-button .like-icon {
+    .core {
+      fill: transparent;
+    }
+  
+    .main-body {
+      fill: transparent;
+    }
+  
+    .contour {
+      fill: var(--accent-colour, black);
+    }
+  
+    .sparks {
+      fill: var(--heart-icon-colour, red);
+      opacity: 0;
+    }
+  }
 
 
-svg.is-liked {
+.like-icon.is-liked {
 
     .core {
         transition: fill 0.1s ease;
@@ -67,8 +85,54 @@ svg.is-liked {
     }
 }
 
+.like-icon.is-liked {
+    .core,
+    .main-body,
+    .contour {
+      fill: var(--heart-icon-colour, red);
+    }
+  
+    .sparks {
+      opacity: 0%;
+    }
+  }
+
 svg {
     .contour {
         transition: fill 0.1s ease;
     }
 }
+
+
+.card__icon-button:hover .like-icon {
+    .core {
+      transition: fill 0.05s ease;
+      fill: var(--accent-colour, black);
+    }
+  
+    .main-body {
+      transition: fill 0.05s 0.05s ease;
+      fill: var(--accent-colour, black);
+    }
+  
+    .contour {
+      transition: fill 0.05s 0.1s ease;
+      fill: var(--accent-colour, black);
+    }
+  }
+  
+  .card__icon-button:hover .like-icon.is-liked {
+    .core,
+    .main-body,
+    .contour {
+      fill: var(--heart-icon-colour, red);
+    }
+  }
+  
+  .card__icon-button:active .like-icon {
+  
+    .core,
+    .main-body {
+      fill: var(--heart-icon-colour, red);
+    }
+  }
